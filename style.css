@@ -1,0 +1,347 @@
+/* =====================================================
+   GERAL
+===================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(180deg, #0b0216, #2a0837);
+    color: #eee;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    font-family: "Cinzel", serif;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #ff8a64, #c776ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.header {
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Espaço entre a logo e o texto */
+}
+
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ff6a3d, #b24cff);
+}
+
+.logo-top {
+    color: #ffdf74;
+    font-size: 0.9rem;
+}
+
+.logo-bottom {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ddd;
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.btn-discord {
+    background: linear-gradient(90deg, #ff6a3d, #b24cff);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero {
+    text-align: center;
+    padding: 40px 20px 80px;
+}
+
+.hero-title {
+    font-family: "Cinzel", serif;
+    font-size: 5rem;
+    background: linear-gradient(90deg, #ff8a64, #c776ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    max-width: 650px;   /* impede quebrar errado */
+    margin: 0 auto;     /* centraliza */
+    line-height: 1.45;  /* deixa bonito */
+}
+
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff6a3d, #b24cff);
+    padding: 14px 25px;
+    border-radius: 30px;
+    color: #000;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.15);
+    transform: translateY(-4px);
+}
+
+.btn-secondary {
+    border: 1px solid #555;
+    padding: 14px 22px;
+    border-radius: 30px;
+    color: #ddd;
+    transition: 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #333;
+}
+
+
+.stat-card {
+    background: rgba(255,255,255,0.04);
+    padding: 16px 22px;
+    border-radius: 10px;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
+/* =========================
+   FEATURE CARDS - CLAREAR / MAIS CONTRASTE
+   Substitua a seção antiga por este bloco
+   ========================= */
+.features { padding: 60px 20px 90px; }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Card base - mais claro e com brilho interno */
+.feature-card {
+  padding: 30px;
+  border-radius: 16px;
+  min-height: 170px;
+
+  /* Fundo mais opaco para clarear */
+  background: linear-gradient(180deg,
+              rgba(255,255,255,0.045),
+              rgba(255,255,255,0.02));
+  /* Borda mais visível */
+  border: 1px solid rgba(255,255,255,0.07);
+
+  /* Leve elevação interna para destaque */
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 10px 30px rgba(0,0,0,0.35);
+
+  transition: transform .32s ease, box-shadow .32s ease;
+  position: relative;
+  overflow: hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* Decorativo sutil no topo */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  left: -20%;
+  top: -40%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.02), transparent 30%);
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+/* título & texto mais claros */
+.feature-card h3 {
+  font-size: 1.3rem;
+  color: #ffeefc;        /* título mais claro */
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.feature-card p {
+  font-size: 0.98rem;
+  color: rgba(240,225,255,0.95); /* texto mais claro */
+  line-height: 1.55;
+  opacity: 0.95;
+}
+
+/* Hover - mais leve e glow sutil */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 22px 60px rgba(10,8,20,0.55),
+    0 0 28px rgba(0,0,0,0.12);
+}
+
+/* -------------------------
+   VARIANTS (mantêm degradê, mas com borda/shine mais visível)
+   ------------------------- */
+.feature-card.purple {
+  background-image: linear-gradient(135deg,
+      rgba(142, 72, 212, 0.18),
+      rgba(56, 22, 110, 0.08));
+  border-color: rgba(180,130,255,0.28);
+}
+.feature-card.purple:hover {
+  box-shadow: 0 18px 54px rgba(90,50,170,0.18), 0 0 32px rgba(150,80,255,0.22);
+}
+
+.feature-card.red {
+  background-image: linear-gradient(135deg,
+      rgba(210, 70, 90, 0.18),
+      rgba(110, 20, 35, 0.08));
+  border-color: rgba(255,100,120,0.28);
+}
+.feature-card.red:hover {
+  box-shadow: 0 18px 54px rgba(160,30,60,0.16), 0 0 32px rgba(255,70,100,0.22);
+}
+
+.feature-card.yellow {
+  background-image: linear-gradient(135deg,
+      rgba(240,160,70,0.16),
+      rgba(100,50,12,0.06));
+  border-color: rgba(255,180,100,0.28);
+}
+.feature-card.yellow:hover {
+  box-shadow: 0 18px 54px rgba(140,90,30,0.12), 0 0 32px rgba(255,180,80,0.18);
+}
+
+.feature-card.blue {
+  background-image: linear-gradient(135deg,
+      rgba(90,130,255,0.16),
+      rgba(20,36,100,0.06));
+  border-color: rgba(120,160,255,0.28);
+}
+.feature-card.blue:hover {
+  box-shadow: 0 18px 54px rgba(40,80,160,0.14), 0 0 32px rgba(80,140,255,0.18);
+}
+
+/* hover inner frame */
+.feature-card:hover::after {
+  content: "";
+  position: absolute; inset: 0; border-radius: 16px; pointer-events: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* Responsivo (mantém comportamento) */
+@media (max-width: 980px) {
+  .feature-grid { grid-template-columns: 1fr; gap: 22px; max-width: 720px; }
+  .feature-card { padding: 22px; border-radius: 12px; min-height: auto; }
+}
+
+/* =====================================================
+   SCREENSHOTS
+===================================================== */
+
+.screens {
+    padding: 60px 20px;
+}
+
+.screens-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 10px;
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+.screens-grid img {
+    width: 100%;
+    height: 270px; /* padroniza */
+    object-fit: cover; /* corta corretamente sem distorcer */
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta {
+    padding: 60px 20px;
+}
+
+.cta-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.04);
+    text-align: center;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    padding: 50px 0;
+    color: #ccc;
+    text-align: center;
+}
+
+.footer-links a {
+    margin-left: 20px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
